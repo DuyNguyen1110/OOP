@@ -7,7 +7,7 @@ private:
     int tu;
     int mau;
     int UCLN(){
-        int a = abs(tu); // Khử âm
+        int a = abs(tu); 
         int b = abs(mau);
         if(a == 0)return b;
         if(b == 0)return a;
