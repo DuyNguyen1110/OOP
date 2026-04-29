@@ -6,7 +6,7 @@ private:
     int month;
     int year;
     bool KiemTraNamNhuan(){
-        if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))return 1;
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)return 1;
         return 0;
     }
     int KiemTraThang(){
@@ -46,12 +46,11 @@ Yesterday Yesterday::NgayHomQua(){
     HomQua.year = year;
     if(HomQua.day < 1){
         HomQua.month = month - 1;
-        HomQua.day = HomQua.KiemTraThang();
         if(HomQua.month < 1){
             HomQua.day = 31;
             HomQua.month = 12;
             HomQua.year = year - 1;
-        }
+        }else HomQua.day = HomQua.KiemTraThang();
     }
     return HomQua;
 }
