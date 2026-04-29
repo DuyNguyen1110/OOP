@@ -18,10 +18,20 @@ void SoPhuc::Nhap(int i){
     cin >> ao;
 }
 void SoPhuc::Xuat(){
-    if(ao == 0)cout << thuc;
-    else if(thuc == 0) cout << ao << "i";
-    else if(ao > 0) cout << thuc << " + " << ao << "i" << endl;
-    else if(ao < 0) cout << thuc << " - " << -ao << "i" << endl;
+    if (thuc == 0 && ao == 0) {
+        cout << "0";
+    } else {
+        if (thuc != 0) cout << thuc;
+        if (ao > 0) {
+            if (thuc != 0) cout << " + ";
+            if (ao == 1) cout << "i";
+            else cout << ao << "i";
+        } else if (ao < 0) {
+            if (ao == -1) cout << " - i";
+            else cout << " - " << -ao << "i";
+        }
+    }
+    cout << endl;
 }
 SoPhuc SoPhuc::Tong(SoPhuc& sp){
     SoPhuc moi;
