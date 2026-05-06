@@ -6,7 +6,7 @@ private:
     int month;
     int year;
     bool KiemTraNamNhuan(){
-        if(year % 4 == 0 || (year % 100 != 0 && year % 400 == 0))return 1;
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)return 1;
         return 0;
     }
     int KiemTraThang(){

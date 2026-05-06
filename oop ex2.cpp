@@ -3,9 +3,9 @@
 using namespace std;
 class ToaDo{
 private:
-    int x;
-    int y;
-    int z;
+    float x;
+    float y;
+    float z;
 public:
     void NhapToaDo();
     float KhoangCach(const ToaDo& a);

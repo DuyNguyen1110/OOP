@@ -7,7 +7,7 @@ private:
     double y;
 public:
     void Nhap();
-    float KhoangCach(const ToaDo& a);
+    double KhoangCach(const ToaDo& a);
     double getx(){
         return x;
     }
@@ -21,7 +21,7 @@ void ToaDo::Nhap(){
     cout << "Nhap thanh phan thu hai: ";
     cin >> y;
 }
-float ToaDo::KhoangCach(const ToaDo& a){
+double ToaDo::KhoangCach(const ToaDo& a){
     return sqrt(pow(x - a.x, 2) + pow(y - a.y, 2));
 }
 int main(){
